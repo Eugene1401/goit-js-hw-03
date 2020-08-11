@@ -1,12 +1,8 @@
 const findBestEmployee = function (employees) {
-  let total = 0;
-  for (const employee in employees) {
-    total += employees[employee];
-  }
-
-  return total;
+  return Object.keys(employees)[
+    [...Object.values(employees)].indexOf(Math.max(...Object.values(employees)))
+  ];
 };
-
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
